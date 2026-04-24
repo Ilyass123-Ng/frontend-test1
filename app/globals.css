@@ -8,10 +8,13 @@ body {
   background-color: hsl(0, 0%, 100%);
 }
 .text-bluebarry{
-  color: #000080;
+  color: #0404259e;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
 }
 .bg-nav{
-  background-color: hsla(240, 18%, 90%, 0.518);
+  background-color: hsla(240, 18%, 90%, 0.285);
   border: none !important;
   transition: all 0.2s ease;
 }

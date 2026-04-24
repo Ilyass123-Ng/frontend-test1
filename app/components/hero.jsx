@@ -3,7 +3,7 @@
 
 export function Hero() {
     return (
-        <div className="container">
+        <div className="container-fluid p-0">
             <div className="row">
                 <div className="col-md-5">
                     <h2 className="text-bleubarry">Good Morning ,<span className="text-name h2">Selena!</span> </h2>

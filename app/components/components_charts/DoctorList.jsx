@@ -13,14 +13,17 @@ export function DoctorList() {
     <div className="d-flex flex-column gap-3 py-1">
       {doctors.map((elem, key) => (
         <div key={key} className="d-flex align-items-center justify-content-between">
-          <div className="d-flex align-items-center gap-3">
+        
+          <div className="d-flex align-items-center ">
             <img src={elem.img} className="rounded-circle" width="40" height="40" alt="doctor" style={{ objectFit: 'cover' }}/>
             <div>
               <h6 className="mb-0 fw-bold small text-dark">{elem.name}</h6>
               <small className="text-secondary" style={{ fontSize: '10px' }}>{elem.hospital}</small>
             </div>
+            
           </div>
         </div>
+        
       ))}
     </div>
   );

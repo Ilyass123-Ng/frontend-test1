@@ -4,11 +4,11 @@ import { Card, Button } from 'react-bootstrap';
 
 export function ChartFormat({ children, title, button, showBadges = false }) {
   return (
-    <Card className="border-0 shadow-sm p-4" style={{ borderRadius: '24px' }}>
+    <Card className="border-0 shadow-sm p-4 h-100 w-100" style={{ borderRadius: '24px', minHeight: '340px' }}>
       <div className="d-flex justify-content-between align-items-center mb-2">
-        <h6 className="mb-0 fw-bold" style={{ color: '#2c3e50' }}>{title}</h6>
+        <h6 className="mb-0 fw-bold" style={{ color: '#2c3e50',whiteSpace:"nowrap"}}>{title}</h6>
         {button && (
-          <Button variant="outline-light" className="text-primary rounded-pill btn-sm px-3 border">
+          <Button variant="outline-light" className="text-primary rounded-pill btn-sm px-3 border" style={{whiteSpace: 'nowrap'}}>
             {button}
           </Button>
         )}
@@ -25,7 +25,9 @@ export function ChartFormat({ children, title, button, showBadges = false }) {
         </div>
       )}
 
-      {children}
+      <div className="flex-grow-1 d-flex flex-column pt-1">
+        {children}
+      </div>
     </Card>
   );
 }

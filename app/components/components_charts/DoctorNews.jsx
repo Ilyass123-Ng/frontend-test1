@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 
 export function DoctorNews() {
   return (
-    <Card className="border-0 shadow-sm p-4 text-white d-flex flex-column" style={{ borderRadius: '24px', background: 'linear-gradient(135deg, #9ab0e7ff 0%, #3b71ca 100%)', height: '100%', minHeight: '300px' }}>
+    <Card className="border-0 shadow-sm p-4 text-white d-flex flex-column h-100 w-100" style={{ borderRadius: '24px', background: 'linear-gradient(135deg, #9ab0e7ff 0%, #3b71ca 100%)', minHeight: '340px' }}>
       <div className="d-flex justify-content-between align-items-center mb-4">
          <div className="rounded-circle border border-2 d-flex align-items-center justify-content-center" style={{ width: '40px', height: '40px', borderColor: 'rgba(255,255,255,0.4) !important' }}>
             <div className="rounded-circle bg-white" style={{ width: '10px', height: '10px' }}></div>

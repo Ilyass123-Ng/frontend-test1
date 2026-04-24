@@ -61,5 +61,5 @@ export function LineChart() {
     }
   };
 
-  return <div style={{ height: '150px' }}><Line data={data} options={options} /></div>;
+  return <div style={{ height: '220px' }}><Line data={data} options={options} /></div>;
 }

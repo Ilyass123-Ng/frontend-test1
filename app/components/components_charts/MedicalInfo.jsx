@@ -11,7 +11,6 @@ export function MedicalInfo() {
 
   return (
     <>
-    <hr />
     <div className="py-2">
     
       <div className="d-flex align-items-center justify-content-between mb-4">
@@ -25,7 +24,7 @@ export function MedicalInfo() {
           
         </div>
         <div className="p-2 border rounded-3 bg-light d-flex  align-items-center justify-content-center">
-            <i className="fa-solid fa-qrcode text-dark" style={{ fontSize: '20px' }}></i>
+            <img src="./qrcode.png" alt="qrcode" width="40" height="40" />
         </div>
       </div>
       <hr />

@@ -53,5 +53,5 @@ export function TrendLineChart() {
     }
   };
 
-  return <div style={{ height: '140px', width: '100%' }}><Line data={data} options={options} /></div>;
+  return <div style={{ height: '220px'}}><Line data={data} options={options} /></div>;
 }

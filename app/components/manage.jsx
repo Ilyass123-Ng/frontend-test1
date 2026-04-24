@@ -11,7 +11,7 @@ export function Manage() {
         setSearch(e.target.value);
     }
     return (
-        <div className="container">
+        <div className="container-fluid p-0">
             <div className="d-flex justify-content-between">
                 <div className="">
                     <button className="btn mx-2 btn-manage rounded-pill"><i className="fa-solid fa-arrow-down-short-wide"></i> Filter</button>

@@ -8,18 +8,17 @@ import { Hero } from "./components/hero.jsx";
 import { Manage } from "./components/manage.jsx";
 import { LineChart } from "./components/charts/Line-chart.jsx";
 import { BarChart } from "./components/charts/Bar-chart.jsx";
-import { DoughnutChart } from "./components/charts/Doughnut-chart.jsx";
 import { TrendLineChart } from "./components/charts/TrendLine-chart.jsx";
 import { ChartFormat } from "./components/Chart_format.jsx";
-import { MedicalInfo } from "./components/MedicalInfo.jsx";
-import { DoctorNews } from "./components/DoctorNews.jsx";
-import { DoctorList } from "./components/DoctorList.jsx";
-import { CheckupProgress } from "./components/CheckupProgress.jsx";
+import { MedicalInfo } from "./components/components_charts/MedicalInfo.jsx";
+import { DoctorNews } from "./components/components_charts/DoctorNews.jsx";
+import { DoctorList } from "./components/components_charts/DoctorList.jsx";
+import { CheckupProgress } from "./components/components_charts/CheckupProgress.jsx";
 
 export default function Home() {
   return (
     <main className="py-4"> 
-      <Container fluid className="px-5">
+      <Container className="px-3">
         <div className="mb-4">
           <Hero />
         </div>
@@ -29,7 +28,7 @@ export default function Home() {
         
         <Row className="mb-4">
           {/* */}
-          <Col lg={3} md={6} className="mb-4">
+          <Col  md={3} className="mb-4 d-flex">
             <ChartFormat title="Health Report Pending" button="Report" showBadges={true}>
               <div style={{ position: 'relative', marginTop: '-10px' }}>
                 <div style={{
@@ -46,12 +45,12 @@ export default function Home() {
           </Col>
 
           {/*  news pour doctor */}
-          <Col lg={3} md={6} className="mb-4">
+          <Col  md={3} className="mb-4 d-flex">
             <DoctorNews />
           </Col>
 
-          {/*  health trend doughnut chart */}
-<Col lg={3} md={6} className="mb-4">
+          {/*  health trend trendline chart */}
+          <Col md={3} className="mb-4 d-flex">
   <ChartFormat title="Health Trend Chart" button={<i className="fa-solid fa-ellipsis"></i>}>
     <div style={{ position: 'relative' }}>
       <div style={{ position: 'absolute', top: '10px', left: '0', zIndex: 10 }}>
@@ -60,7 +59,7 @@ export default function Home() {
           <span className="badge rounded-pill border text-primary bg-light" style={{ fontSize: '10px' }}>+0.75%</span>
         </div>
       </div>
-      <div className="pt-4">
+      <div className="py-2">
         <TrendLineChart />
       </div>
     </div>
@@ -69,7 +68,7 @@ export default function Home() {
 
 
           {/* checkup progress */}
-          <Col lg={3} md={6} className="mb-4">
+          <Col  md={3} className="mb-4 d-flex">
             <ChartFormat title="Checkup progress" button={<i className="fa-solid fa-ellipsis"></i>}>
               <CheckupProgress />
             </ChartFormat>
@@ -78,22 +77,22 @@ export default function Home() {
 
         <Row>
           {/* medical info */}
-          <Col lg={3} md={12} className="mb-4">
+          <Col  md={3} className="mb-4 d-flex">
             <ChartFormat title="Medical Information" button="See Details">
               <MedicalInfo />
             </ChartFormat>
           </Col>
 
           {/* patient health bar chart */}
-          <Col lg={6} md={12} className="mb-4">
+          <Col  md={6} className="mb-4 d-flex">
             <ChartFormat title="Patient health report" button="See Details">
               <div className="d-flex gap-4 mb-4 small fw-bold">
                 <div className="d-flex align-items-center gap-2">
-                  <span className="rounded-circle" style={{ width: '8px', height: '8px', backgroundColor: 'rgba(59, 113, 202, 0.4)' }}></span>
+                  <span className="rounded-circle border border-info" style={{ width: '12px', height: '12px', backgroundColor: '#fff' }}></span>
                   <span className="text-secondary">Progress</span>
                 </div>
                 <div className="d-flex align-items-center gap-2">
-                  <span className="rounded-circle" style={{ width: '8px', height: '8px', backgroundColor: '#1a2b4b' }}></span>
+                  <span className="rounded-circle" style={{ width: '12px', height: '12px', backgroundColor: '#3b71ca' }}></span>
                   <span className="text-secondary">Recovery</span>
                 </div>
               </div>
@@ -102,7 +101,7 @@ export default function Home() {
           </Col>
 
           {/* list doctors */}
-          <Col lg={3} md={12} className="mb-4">
+          <Col  md={3} className="mb-4 d-flex">
             <ChartFormat title="My Doctor" button="See Details">
               <DoctorList />
             </ChartFormat>
