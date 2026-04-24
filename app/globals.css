@@ -1,7 +1,41 @@
 /* Base styles */
 body {
+  font-family:Arial, Helvetica, sans-serif;
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: #ffffff;
-  color: #333333;
+  color: #491498;
+}
+.navbar{
+  background-color: hsl(0, 0%, 100%);
+}
+.text-bluebarry{
+  color: #000080;
+}
+.bg-nav{
+  background-color: hsla(240, 18%, 90%, 0.518);
+  border: none !important;
+  transition: all 0.2s ease;
+}
+
+.bg-nav.active {
+  background: linear-gradient(to bottom, #0404adab, #3b71ca) !important; 
+  color: white !important; 
+}
+
+.bg-nav:hover:not(.active) {
+  background-color: hsla(240, 18%, 85%, 0.7);
+}
+.text-bleubarry{
+  color: #2222ee;
+  font-weight: bold;
+}
+.text-name{
+  color: #2222eeb2;
+  font-weight: bold;
+}
+.btn-check{
+  background-color: linear-gradient(to bottom, #0404adab, #3b71ca);
+  ;
+}
+.btn-manage{
+   background-color: hsl(0, 0%, 100%)
 }
