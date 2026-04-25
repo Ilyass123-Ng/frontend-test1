@@ -1,44 +1,145 @@
-/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+/* mes variables */
+:root {
+  --primary: #3b71ca;
+  --bg-main: #f8fafd;
+  --card-white: #ffffff;
+  --text-dark: #2c3e50;
+  --text-name:#3b72caaa !important;
+}
+
+/* mode sombre */
+[data-theme='dark'] {
+  --bg-main: #121212;
+  --card-white: #1e1e1e;
+  --text-dark: #ffffff;
+}
+/* style de base */
 body {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: 'Outfit', sans-serif;
+  background-image: url('/bg-medical.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--text-dark);
+  transition: 0.3s;
   margin: 0;
-  color: #491498;
 }
-.navbar{
-  background-color: hsl(0, 0%, 100%);
+
+[data-theme='dark'] body {
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('/bg-medical.png');
 }
-.text-bluebarry{
-  color: #0404259e;
+
+
+/* ma navbar */
+.nav-cust {
+  background-color: var(--card-white) !important;
+  border-bottom: 2px solid #eeeeee;
+  transition: 0.3s;
+}
+
+.text-bluebarry {
+  color: var(--text-dark);
   font-size: 15px;
   font-weight: bold;
   padding: 10px;
+  text-decoration: none;
 }
-.bg-nav{
-  background-color: hsla(240, 18%, 90%, 0.285);
+
+.nav-item .active {
+  background-color: var(--primary) !important;
+  color: white !important;
+  border-radius: 20px;
+}
+
+/* mes cartes */
+.card-prem {
+  background-color: var(--card-white) !important;
   border: none !important;
-  transition: all 0.2s ease;
+  border-radius: 24px !important;
+  transition: 0.3s;
 }
 
-.bg-nav.active {
-  background: linear-gradient(to bottom, #0404adab, #3b71ca) !important; 
-  color: white !important; 
+.card-prem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
 }
 
-.bg-nav:hover:not(.active) {
-  background-color: hsla(240, 18%, 85%, 0.7);
+/* animation*/
+.dot-status {
+  width: 12px;
+  height: 12px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  border: 2px solid white;
 }
-.text-bleubarry{
-  color: #2222ee;
+
+.fade-in {
+  animation: simpleFade 1s;
+}
+
+@keyframes simpleFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* forcer le texte en dark mode sauf le nom anime */
+[data-theme='dark'] .text-dark,
+[data-theme='dark'] .btn,
+[data-theme='dark'] h6,
+[data-theme='dark'] h2:not(.text-name),
+[data-theme='dark'] span:not(.text-name),
+[data-theme='dark'] small {
+  color: white !important;
+}
+
+.active {
+  color: var(--primary) !important;
+  background: linear-gradient(135deg, var(--bg-main) 0%, var(--primary) 100%) !important;
+  border-radius: 20px;
+}
+
+.stagger > * {
+  opacity: 0;
+  animation: slide-up 0.8s forwards;
+}
+
+.stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger > *:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradient {
+  0% { color: #9496e7; }
+  50% { color: #5b87ce; }
+  100% { color: #3d76d2; }
+}
+
+.text-name {
+  color:var(--text-name);
+  animation: gradient 1.5s infinite;
   font-weight: bold;
+  transition: 0.1s ease-in-out;
 }
-.text-name{
-  color: #2222eeb2;
-  font-weight: bold;
+
+[data-theme='dark'] .bg-light {
+  background-color: #2a2a2a !important;
 }
-.btn-check{
-  background-color: linear-gradient(to bottom, #0404adab, #3b71ca);
-  ;
+
+.text{
+  color: black !important;
 }
-.btn-manage{
-   background-color: hsl(0, 0%, 100%)
+
+[data-theme='dark'] .text {
+  color: black !important;
+} 
+
+[data-theme='dark'] .bg-dark {
+  background-color: #070707 !important;
+  color: white !important;
 }

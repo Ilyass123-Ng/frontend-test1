@@ -26,8 +26,8 @@ export default function Home() {
           <Manage />
         </div>
         
-        <Row className="mb-4">
-          {/* */}
+        <Row className="mb-4 stagger">
+          {/* health report  line chart*/}
           <Col  md={3} className="mb-4 d-flex">
             <ChartFormat title="Health Report Pending" button="Report" showBadges={true}>
               <div style={{ position: 'relative', marginTop: '-10px' }}>
@@ -75,7 +75,7 @@ export default function Home() {
           </Col>
         </Row>
 
-        <Row>
+        <Row className="stagger">
           {/* medical info */}
           <Col  md={3} className="mb-4 d-flex">
             <ChartFormat title="Medical Information" button="See Details">

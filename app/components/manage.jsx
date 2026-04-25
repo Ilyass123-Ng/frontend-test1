@@ -11,12 +11,22 @@ export function Manage() {
         setSearch(e.target.value);
     }
     return (
-        <div className="container-fluid p-0">
-            <div className="d-flex justify-content-between">
-                <div className="">
-                    <button className="btn mx-2 btn-manage rounded-pill"><i className="fa-solid fa-arrow-down-short-wide"></i> Filter</button>
-                    <button className="btn mx-2 btn-manage rounded-pill"><i className="fa-regular fa-calendar"></i> <span className='text-nowrap mx-2'> Monthly </span><i className="fa-solid fa-angle-down"></i></button>
-                    <button className="btn mx-2 btn-manage rounded-pill"><i className="fa-solid fa-download"></i> Download Data</button>
+        <div className="container-fluid p-0 fade-in">
+            <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex gap-2">
+                    <button className="btn btn-manage rounded-pill shadow-sm border-0 d-flex align-items-center gap-2 px-3 py-2">
+                      <i className="fa-solid fa-arrow-down-short-wide text-primary"></i> 
+                      <span className="fw-500">Filter</span>
+                    </button>
+                    <button className="btn btn-manage rounded-pill shadow-sm border-0 d-flex align-items-center gap-2 px-3 py-2">
+                      <i className="fa-regular fa-calendar text-primary"></i> 
+                      <span className='text-nowrap fw-500'>Monthly</span>
+                      <i className="fa-solid fa-angle-down opacity-50"></i>
+                    </button>
+                    <button className="btn btn-manage rounded-pill shadow-sm border-0 d-flex align-items-center gap-2 px-3 py-2">
+                      <i className="fa-solid fa-download text-primary"></i>
+                      <span className="fw-500">Download</span>
+                    </button>
                 </div>
                 <div className="d-flex align-items-center">
                     <div className={`d-flex align-items-center bg-light rounded-pill px-2 transition-all ${appearInput ? 'w-100 shadow-sm border' : ''}`} style={{ transition: 'all 0.5s ease', minHeight: '38px' }}>
