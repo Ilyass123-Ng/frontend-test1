@@ -8,24 +8,28 @@ export const metadata = {
 import { NavigationBar } from "./components/Navbar";
 import { ThemeProvider } from "./context/ThemeContext";
 import HeroSection from "./components/HeroSection.jsx";
+import CursorLogic from "./components/CursorLogic";
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
         <style>
-          
+
         </style>
       </head>
       <body className="bg-light">
         <div className="circle-1"></div>
         <div className="circle-2"></div>
         <ThemeProvider>
+          <CursorLogic />
           <NavigationBar />
           <div className="mb-5 ">
-                     <HeroSection />
-                  </div>
+
+            <HeroSection />
+          </div>
           {children}
         </ThemeProvider>
       </body>
