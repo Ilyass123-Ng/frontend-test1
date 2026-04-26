@@ -17,7 +17,7 @@ export function DoctorList() {
           <div className="d-flex align-items-center ">
             <div className="position-relative">
               <img src={elem.img} className="rounded-circle" width="40" height="40" alt="doctor" style={{ objectFit: 'cover' }}/>
-              <div className="dot-status position-absolute bottom-0 end-0"></div>
+              <div className="position-absolute bottom-0 end-0"></div>
             </div>
             <div className="ms-3">
               <h6 className="mb-0 fw-bold small text-dark">{elem.name}</h6>

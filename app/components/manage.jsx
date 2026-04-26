@@ -12,8 +12,9 @@ export function Manage() {
     }
     return (
         <div className="container-fluid p-0 fade-in">
-            <div className="d-flex justify-content-between align-items-center">
-                <div className="d-flex gap-2">
+            <div className="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <div className="d-flex gap-2 flex-wrap">
+
                     <button className="btn btn-manage rounded-pill shadow-sm border-0 d-flex align-items-center gap-2 px-3 py-2">
                       <i className="fa-solid fa-arrow-down-short-wide text-primary"></i> 
                       <span className="fw-500">Filter</span>

@@ -2,9 +2,9 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import { Hero } from "./components/hero.jsx";
+import HeroSection from "./components/HeroSection.jsx";
+
 import { Manage } from "./components/manage.jsx";
 import { LineChart } from "./components/charts/Line-chart.jsx";
 import { BarChart } from "./components/charts/Bar-chart.jsx";
@@ -22,30 +22,23 @@ export default function Home() {
         <div className="mb-4">
           <Hero />
         </div>
+
         <div className="mb-5">
           <Manage />
         </div>
         
         <Row className="mb-4 stagger">
-          {/* health report  line chart*/}
-          <Col  md={3} className="mb-4 d-flex">
+          {/* health report line chart */}
+          <Col  lg={3} md={6} className="mb-4 d-flex">
             <ChartFormat title="Health Report Pending" button="Report" showBadges={true}>
               <div style={{ position: 'relative', marginTop: '-10px' }}>
-                <div style={{
-                  position: 'absolute',
-                  left: '33%',
-                  top: '0',
-                  bottom: '15%',
-                  borderLeft: '2px dashed #d1d9e6',
-                  zIndex: 1
-                }}></div>
+                <div style={{ position: 'absolute', left: '33%', top: '0', bottom: '15%', borderLeft: '2px dashed #d1d9e6', zIndex: 1 }}></div>
                 <LineChart />
               </div>
             </ChartFormat>
           </Col>
-
-          {/*  news pour doctor */}
-          <Col  md={3} className="mb-4 d-flex">
+             {/* doctor news  */}
+          <Col  lg={3} md={6} className="mb-4 d-flex">
             <DoctorNews />
           </Col>
 
@@ -68,7 +61,7 @@ export default function Home() {
 
 
           {/* checkup progress */}
-          <Col  md={3} className="mb-4 d-flex">
+          <Col  lg={3} md={6} className="mb-4 d-flex">
             <ChartFormat title="Checkup progress" button={<i className="fa-solid fa-ellipsis"></i>}>
               <CheckupProgress />
             </ChartFormat>
@@ -77,7 +70,7 @@ export default function Home() {
 
         <Row className="stagger">
           {/* medical info */}
-          <Col  md={3} className="mb-4 d-flex">
+          <Col  lg={3} md={6} className="mb-4 d-flex">
             <ChartFormat title="Medical Information" button="See Details">
               <MedicalInfo />
             </ChartFormat>
@@ -101,7 +94,7 @@ export default function Home() {
           </Col>
 
           {/* list doctors */}
-          <Col  md={3} className="mb-4 d-flex">
+          <Col  lg={3} md={6} className="mb-4 d-flex">
             <ChartFormat title="My Doctor" button="See Details">
               <DoctorList />
             </ChartFormat>
